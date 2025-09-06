@@ -65,7 +65,7 @@ nav button {
 }
 
 main {
-    height: 70svh;
+    height: 80svh;
     width: 90svw;
     margin: 0 auto;
     display: flex;
@@ -121,6 +121,10 @@ main {
 
     label[for="color-picker"] {
         padding-left: .75em;
+    }
+
+    main {
+        height: 60svh;
     }
 }
 
