@@ -1,0 +1,128 @@
+html, body {
+    margin: 0 auto;
+    padding: 0;
+    color: #D1D5DB;
+    background-color: #1F2937;
+    font-family: Inter, sans-serif;
+}
+
+nav input[type="color"], nav select, nav button {
+    border-radius: 6px;
+    font-family: inherit;
+}
+
+nav {
+    height: 20svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .label-inputs {
+    display: flex;
+    align-items: center;
+}
+
+nav label {
+    padding-left: .75em;
+    padding-right: .25em;
+    justify-content: center;
+}
+
+label[for="color-picker"] {
+    padding-left: 0;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+nav input[type="color"] {
+    height: 2.625em;
+    width: 6em;
+    padding: 0;
+    background-color: #1F293A;
+    box-sizing: border-box;
+    border: 1px solid #D1D5DB !important;
+}
+
+
+nav select {
+    height: 2.625em;
+    width: 19.5em;
+    background-color: #1F293A;
+    color: #D5D4D8;
+    font-weight: 400;
+    border-color: #D1D5DB;
+}
+
+nav button {
+    height: 3.2em;    
+    border: none;
+    background-color: #3D4B60;
+    color: #D5D4D8;
+    font-size: 0.7rem;
+    font-weight: 500;
+    border: 1px solid #D5D4D8 ;
+}
+
+main {
+    height: 34.375em;
+    width: 90svw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex ;
+    flex-direction: column;
+}
+
+.color-div {
+    height: 90%;
+}
+
+.color-div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+.color-code {
+    display: flex;
+    flex-direction: column;
+    height: 10%;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 0.75rem;
+    color: #D5D4D8;
+    text-align: center;
+}
+
+.color-code span {
+    text-align: center;
+    width: 100%;
+    word-break: break-word;
+}
+
+
+@media only screen and (max-width: 600px) {
+    nav {
+        height: 30svh;
+        flex-direction: column;
+        justify-items: left ;
+        gap: 1em;
+    }
+    nav input[type="color"], nav select, nav button {
+        width: 80svw;
+        font-size: medium;
+    }
+
+    label[for="color-picker"] {
+        padding-left: .75em;
+    }
+}
+
+
+

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Color scheme generator</title>
+        <meta name="description" content="Generate beautiful color schemes, preview colors, and copy hex codes easily with this interactive color scheme generator." />
+        <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <nav>
+            <div class="label-inputs">
+                <label for="color-picker">1.</label>
+                <input id="color-picker" type="color" title="Pick a base color">
+            </div>
+            <div class="label-inputs">
+                <label for="mode-select">2.</label>
+                <select id="mode-select" name="mode" title="Select a color scheme mode">
+                    <option value="monochrome">Monochrome</option>
+                    <option value="monochrome-dark">Monochrome-dark</option>
+                    <option value="monochrome-light">Monochrome-light</option>
+                    <option value="analogic">Analogic</option>
+                    <option value="complement">Complement</option>
+                    <option value="analogic-complement">Analogic-complement</option>
+                    <option value="triad">Triad</option>
+                    <option value="quad">Quad</option>
+                </select>
+            </div>
+            <div class="label-inputs">
+                <label for="getscheme-button">3.</label>
+                <button id="getscheme-button" title="Get a color scheme">Get color scheme</button>
+            </div>
+        </nav>
+        <main id="main">
+            <ol>
+                <li>Pick a base color.</li>
+                <li>Pick a color scheme mode.</li>
+                <li>Get a color scheme.</li>
+            </ol>
+        </main>
+        <script src="index.js" type="module"></script>
+    </body>
+</html>
