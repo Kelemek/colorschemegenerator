@@ -12,7 +12,7 @@ nav input[type="color"], nav select, nav button {
 }
 
 nav {
-    height: 20svh;
+    height: 10svh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,7 +65,7 @@ nav button {
 }
 
 main {
-    height: 80svh;
+    height: 90svh;
     width: 90svw;
     margin: 0 auto;
     display: flex;
