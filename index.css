@@ -134,6 +134,8 @@ main {
     flex-shrink: 0;
     justify-content: center;
     align-items: center;
+    min-height: 2.8em;
+    height: 2.8em;
     font-weight: 500;
     font-size: var(--color-code-size);
     color: #D5D4D8;
