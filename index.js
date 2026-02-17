@@ -5,23 +5,31 @@ const main = document.getElementById("main")
 
 async function getColorScheme(color, mode) {
     try {
-        const res = await fetch(`https://www.thecolorapi.com/scheme?hex=${color}&mode=${mode}&count=5`)
+        const res = await fetch(`https://www.thecolorapi.com/scheme?hex=${encodeURIComponent(color)}&mode=${encodeURIComponent(mode)}&count=5`)
         if (!res.ok) {
-            throw Error("Something went wrong")
+            throw new Error("Something went wrong")
         }
         const data = await res.json()
         return data
-    } catch(err) {
-        console.error(err.message)
+    } catch (err) {
+        console.error("Color scheme fetch failed:", err)
+        return null
     }
 }
 
 getColorSchemeBtn.addEventListener("click", async function() {
-    const colorScheme = await getColorScheme(getColorPicker.value.replace(/^#/, ''), getModeSelect.value)
-    renderColors(colorScheme)
+    const hex = getColorPicker.value.replace(/^#/, '')
+    const mode = getModeSelect.value
+    const colorScheme = await getColorScheme(hex, mode)
+    if (colorScheme?.colors?.length) {
+        renderColors(colorScheme)
+    } else {
+        main.innerHTML = `<p class="error-msg">Could not load color scheme. Check your connection or try again.</p>`
+    }
 })
 
-function renderColors(colorScheme){
+function renderColors(colorScheme) {
+    if (!colorScheme?.colors?.length) return
     let returnHtml = ""
     for (const color of colorScheme.colors) {
         returnHtml += `

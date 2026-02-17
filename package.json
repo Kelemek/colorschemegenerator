@@ -1,0 +1,8 @@
+{
+  "name": "colorschemegenerator",
+  "private": true,
+  "scripts": {
+    "start": "npx serve . -p 5000",
+    "preview": "npx serve . -p 5000"
+  }
+}
